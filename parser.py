@@ -2,7 +2,7 @@ from display import *
 from matrix import *
 from draw import *
 
-ARG_COMMANDS = [ 'line', 'scale', 'translate', 'xrotate', 'yrotate', 'zrotate', 'circle', 'bezier', 'hermite' ]
+ARG_COMMANDS = [ 'line', 'scale', 'translate', 'xrotate', 'yrotate', 'zrotate', 'circle', 'bezier', 'hermite','box','sphere','torus' ]
 
 def parse_file( f, points, transform, screen, color ):
 
@@ -31,6 +31,7 @@ def parse_file( f, points, transform, screen, color ):
             
             elif cmd == 'hermite':
                 add_curve( points, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], .01, 'hermite' )
+            elif cmd == 'box':
 
             elif cmd == 'scale':
                 s = make_scale( args[0], args[1], args[2] )
